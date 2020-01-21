@@ -18,9 +18,7 @@ c,url,out=0,[],[]
 #################################################################
 puts('ID:%sXXXXX'%(n=i[0][0,3]))
 puts('SIZE:%d'%url.size)
-Parallel.map(url,in_threads: 10){|i|c+=1;print(c,?\r);fetch(out,i)}
+Parallel.map(url,in_threads: 30){|i|c+=1;print(c,?\r);fetch(out,i)}
 puts('=>Finished!')
 File.open('LIST_%s'%n,'w'){|f|out.each{|r|f.puts(r)}}
-File.open('LIST_%s.md'%n,'w'){|f|
-  out.each{|r|f.puts('[%s](%s)'%[r.scan(/s19\d{5}/)[0],r])}
-}
+File.open('LIST_%s.md'%n,'w'){|f|out.each{|r|f.puts('[%s](%s)  '%[r,r])}}
