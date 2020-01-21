@@ -1,6 +1,7 @@
-START=`date +%s`
+#!/bin/sh
+START=$(date +%s)
 
-for i in `ls IDS/s*`;do
+for i in IDS/s*;do
   ruby existcheck.rb < "${i}" 2>/dev/null
 done
 
@@ -9,5 +10,5 @@ mv LIST_*md LISTS_MD/
 mv LIST_* LISTS/
 date +%Y-%m-%d_%H:%M:%S>>log
 
-END=`date +%s`
+END=$(date +%s)
 echo "===>>>ALL FINISHED. TIME IS:$((END-START)) sec."
