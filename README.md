@@ -11,7 +11,7 @@
   - 存在している学籍番号
 - LISTS
   - indexページのURI一覧
-- LISTS_md
+- LISTS_MD
   - リンクをクリックで踏めるようにしたもの
 - log
   - execute.shの実行ログ
