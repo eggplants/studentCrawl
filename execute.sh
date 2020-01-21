@@ -7,5 +7,7 @@ done
 mkdir -p LISTS_MD LISTS
 mv LIST_*md LISTS_MD/
 mv LIST_* LISTS/
+date +%Y-%m-%d_%H:%M:%S>>log
+
 END=`date +%s`
 echo "===>>>ALL FINISHED. TIME IS:$((END-START)) sec."
