@@ -2,16 +2,16 @@
 筑波大学生の公開ホームページをクロールしちゃお!
 
 # 中身
-- execute.sh
-  - existcheck.rbを動かしたり
+- `execute.sh`
+  - `existcheck.rb`を動かしたり
   - 生成したファイルをまとめたり
-- existcheck.rb
-  - parallelでクロール
-- IDS
+- `existcheck.rb`
+  - [parallel](https://github.com/grosser/parallel)でクロール
+- `IDS`
   - 存在している学籍番号
-- LISTS
+- `LISTS`
   - indexページのURI一覧
-- LISTS_MD
+- `LISTS_MD`
   - リンクをクリックで踏めるようにしたもの
-- log
-  - execute.shの実行ログ
+- `log`
+  - `execute.sh`の実行ログ

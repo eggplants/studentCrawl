@@ -17,9 +17,10 @@ c,url,out=0,[],[]
   url<<'%s://www.u.tsukuba.ac.jp/~%s/index.%s'%[protocol,id,sort]
 }}}
 #################################################################
+nowdate=`LANG='en_EN' date +%y-%m-%d`.chomp
 puts('ID:%sXXXXX'%(n=i[0][0,3]))
 puts('SIZE:%d'%url.size)
 Parallel.map(url,in_threads:30){|i|c+=1;print(c,?\r);fetch(out,i)}
 puts('=>Finished!')
-File.open('./LISTS/LIST_%s'%n,'w'){|f|out.each{|r|f.puts(r)}}
-File.open('./LISTS_MD/LIST_%s.md'%n,'w'){|f|out.each{|r|f.puts('[%s](%s)  '%[r,r])}}
+File.open('./LISTS/%s/LIST_%s'%[nowdate,n],'w'){|f|out.each{|r|f.puts(r)}}
+File.open('./LISTS_MD/%s/LIST_%s.md'%[nowdate,n],'w'){|f|out.each{|r|f.puts('[%s](%s)  '%[r,r])}}
