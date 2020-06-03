@@ -10,6 +10,7 @@
   - [parallel](https://github.com/grosser/parallel)でクロール
 - `IDS`
   - 存在している学籍番号
+  - 一応非公開に
 - `LISTS`
   - indexページのURI一覧
 - `LISTS_MD`
