@@ -12,7 +12,7 @@ end
 #################################################################
 c,url,out=0,[],[]
 (i=`dd 2>/dev/null`.split)   .each   { | id       |
-['http']                     .each   { | protocol |
+['http', 'https']                     .each   { | protocol |
 ['htm','html']               .each   { | sort     |
   print id,"\r"
   url<<'%s://www.u.tsukuba.ac.jp/~%s/index.%s'%[protocol,id,sort]
