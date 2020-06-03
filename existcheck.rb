@@ -6,13 +6,14 @@ def fetch(ok,u)
   begin
     bakcode=Net::HTTP.new(url.host).get(url.request_uri).code
     ok.push(u) if bakcode=="200"
+    sleep(0.1)
   rescue;end
 end
 #################################################################
 c,url,out=0,[],[]
 (i=`dd 2>/dev/null`.split)   .each   { | id       |
-['http']         .each   { | protocol |
-['htm','html']   .each   { | sort     |
+['http']                     .each   { | protocol |
+['htm','html']               .each   { | sort     |
   print id,"\r"
   url<<'%s://www.u.tsukuba.ac.jp/~%s/index.%s'%[protocol,id,sort]
 }}}
