@@ -7,7 +7,7 @@
   - `existcheck.rb`を動かしたり
   - 生成したファイルをまとめたり
 - `existcheck.rb`
-  - [parallel](https://github.com/grosser/parallel)でクロール
+  - [parallel](https://github.com/grosser/parallel)で並列クロール
 - `IDS`
   - 存在している学籍番号
   - 一応非公開に
